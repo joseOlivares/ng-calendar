@@ -1,0 +1,80 @@
+@use '../../../styles.scss' as *;
+
+.dp-hidden {
+  width: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+   .input-group{
+    input{
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+  }
+}
+.custom-day {
+  text-align: center;
+  padding: 0.185rem 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+.custom-day.focused {
+  background-color: #e6e6e6;
+}
+.custom-day.range,
+.custom-day:hover {
+  background-color: rgb(2, 117, 216);
+  color: white;
+}
+.custom-day.faded {
+  background-color:#DEE2E6 ;
+  color:#5a6570 ;
+}
+
+
+/**Sobreescribiendo estilos del datepicker*/
+/*:host ::ng-deep .ngb-dp-weekday {
+  color: $color-azul-oscuro-GBM;
+  font-weight: 600;
+  font-style: normal;
+
+}
+
+:host ::ng-deep .ngb-dp-week {
+  .disabled {
+    color: #bdbec8;
+  }
+
+}*/
+
+/*input rounded*/
+.ticket-search-input {
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid #ced4da;
+
+  .form-control {
+      border: none;
+      box-shadow: none;
+  }
+
+  .form-control:focus{
+      border: none;
+      box-shadow: none;
+  }
+
+  .input-group-text {
+      background: white;
+      border: none;
+  }
+
+  .input-group-text i {
+      color: #0163FF;
+  }
+
+  .form-control::placeholder {
+      color: #6C757D;
+  }
+}

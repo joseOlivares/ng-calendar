@@ -1,0 +1,66 @@
+ <form class="row">
+	<div class="col-12">
+		<div class="dp-hidden position-absolute custom-styles">
+      <div class="input-group">
+        <input
+        name="datepicker"
+        class="form-control"
+        ngbDatepicker
+        #datepicker="ngbDatepicker"
+        [autoClose]="'outside'"
+        (dateSelect)="onDateSelection($event, datepicker)"
+        [displayMonths]="2"
+        [dayTemplate]="t"
+        outsideDays="hidden"
+        [startDate]="fromDate!"
+        [minDate]="minDate"
+        [maxDate]="maxDate"
+        [weekdays]="'short'"
+        navigation="arrows"
+        [ngClass]="{ 'custom-calendar': true }"
+        tabindex="-1"
+        />
+
+        <ng-template #t let-date let-focused="focused">
+          <span
+            class="custom-day"
+            [class.focused]="focused"
+            [class.range]="isRange(date)"
+            [class.faded]="isHovered(date) || isInside(date)"
+            (mouseenter)="hoveredDate = date"
+            (mouseleave)="hoveredDate = null"
+          >
+            {{ date.day }}
+          </span>
+        </ng-template>
+
+      </div>
+    </div>
+
+
+    <div class="input-group ticket-search-input">
+			<input
+				#dpFromDate
+				class="form-control"
+				placeholder="{{inputPlaceholder()}}"
+				name="dpFromDate"
+				[value]="rangeDate"
+				(input)="fromDate = validateInput(fromDate, dpFromDate.value) || calendar.getToday()"
+        (click)="datepicker.toggle()"
+        [readOnly]="inputReadOnly()"
+			/>
+      <span class="input-group-text bg-white" (click)="datepicker.toggle()" role="button">
+        <i class="ph ph-calendar-dots fs-5"></i>
+      </span>
+		</div>
+  </div>
+</form>
+
+
+
+
+
+
+
+
+

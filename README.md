@@ -1,6 +1,12 @@
 # NgCalendar
 
+This is an implementation of ng-bootstrap calendar as standalone component. It provides a customizable date range picker with support for range selection, custom styling, and responsive design.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+
+## Author
+
+José Luis Olivares. Please endorse my skills on Linkedin (https://www.linkedin.com/in/jolivaress/)
 
 ## Development server
 

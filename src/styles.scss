@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+/*Custom Styles date-range-picker*/
+.ngb-dp-weekday {
+  color: #070D2D !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+
+}
+
+.ngb-dp-week {
+  .disabled {
+    color: #bdbec8;
+  }
+
+}
+
