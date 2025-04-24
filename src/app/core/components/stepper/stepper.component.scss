@@ -1,0 +1,13 @@
+/* stepper.component.css */
+.badge {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+.text-primary .ph {
+  color: #0d6efd;
+}

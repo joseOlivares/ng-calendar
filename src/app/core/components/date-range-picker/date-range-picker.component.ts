@@ -1,7 +1,7 @@
 import { Component, input, output } from '@angular/core';
 import { inject } from '@angular/core';
 import { NgbCalendar, NgbDate, NgbDateParserFormatter, NgbInputDatepicker, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
-import { DateRangePicker } from '../../types/date-range-picker';
+import { DateRangePicker } from '../../../types/date-range-picker';
 import { CommonModule } from '@angular/common';
 
 @Component({

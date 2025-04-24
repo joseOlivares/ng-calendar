@@ -10,8 +10,16 @@ export const routes: Routes = [
         loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent)
     },
     {
+        path: 'stepper',
+        loadComponent: () => import('./core/components/stepper/stepper.component').then(m => m.StepperComponent)
+    },
+    {
+      path: 'stepper2',
+      loadComponent: () => import('./core/components/stepper2/stepper2.component').then(m => m.Stepper2Component)
+  },
+    {
         path: 'date-range-picker',
-        loadComponent: () => import('./components/date-range-picker/date-range-picker.component').then(m => m.DateRangePickerComponent)
+        loadComponent: () => import('./core/components/date-range-picker/date-range-picker.component').then(m => m.DateRangePickerComponent)
     },
     {
         path: '**',

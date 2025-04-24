@@ -1,0 +1,30 @@
+<div class="stepper-container" [class.vertical]="isVertical()">
+  <div class="stepper" [class.vertical]="isVertical()">
+    <div
+      *ngFor="let step of steps(); let i = index"
+      class="step"
+      [class.active]="i === currentStep()"
+      [class.completed]="i < currentStep()"
+      [class.vertical]="isVertical()"
+    >
+      <div class="step-icon">
+        @if (i < currentStep()) {
+          <i class="ph ph-check-circle  icon completed" ></i>
+        } @else {
+          <i class="ph ph-circle icon" [class.active]="i === currentStep()" ></i>
+        }
+      </div>
+      <div class="step-content">
+        <div class="step-title">{{ step.title }}</div>
+        @if (step.description) {
+          <div class="step-description">{{ step.description }}</div>
+        }
+      </div>
+      @if (!isVertical() && i < steps().length - 1) {
+        <div class="step-connector">
+          <i class="ph ph-caret-right  connector-icon" > </i>
+        </div>
+      }
+    </div>
+  </div>
+</div>

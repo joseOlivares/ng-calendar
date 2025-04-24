@@ -1,0 +1,31 @@
+<!-- HTML actualizado para evitar el error -->
+
+<!-- Substeps -->
+<ng-container *ngIf="steps[currentStep()] as current">
+  <div *ngIf="(current.subSteps ?? []).length > 0">
+    <div class="d-flex flex-wrap gap-3 justify-content-center mb-3">
+      <div
+        *ngFor="let sub of current.subSteps; let j = index"
+        class="badge bg-secondary px-3 py-2"
+        [ngClass]="{ 'bg-primary': currentSubStep() === j }"
+        (click)="goToSubStep(j)"
+        role="button"
+      >
+        {{ sub }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido del paso -->
+  <div class="card shadow-sm p-4">
+    <h5 class="mb-3">
+      Paso {{ currentStep() + 1 }}: {{ current.title }}
+    </h5>
+    <p *ngIf="current.subSteps.length > 0">
+      Subpaso actual: {{ current.subSteps[currentSubStep()] }}
+    </p>
+    <p *ngIf="current.subSteps.length === 0">
+      Este paso no tiene subpasos.
+    </p>
+  </div>
+</ng-container>
